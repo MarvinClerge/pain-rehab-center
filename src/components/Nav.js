@@ -4,7 +4,7 @@ import { Container, Grid, List } from 'semantic-ui-react'
 const Nav = props => {
 
   return(
-    <Container>
+    <Container className='nav-container'>
       <Grid columns={2}>
         <Grid.Column>
           <p className='nav-title'>Pain & Rehab Center</p>

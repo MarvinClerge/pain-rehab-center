@@ -3,7 +3,7 @@ import { Container, Divider, Grid } from 'semantic-ui-react'
 
 const Services = props => {
   return(
-    <Container textAlign='center'>
+    <Container className='services-container' textAlign='center'>
       <h2>Services</h2>
       
       <Divider hidden />

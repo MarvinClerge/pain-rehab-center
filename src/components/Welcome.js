@@ -3,7 +3,7 @@ import { Button, Container, Divider } from 'semantic-ui-react'
 
 const Welcome = props => {
   return(
-    <Container textAlign='center'>
+    <Container className='welcome-container' textAlign='center'>
       <Container>
         <p>Thank you for visiting the Pain & Rehab Center’s website.</p>
         <p>The leading health professionals at our facility are dedicated to helping you achieve a pain free life.</p>

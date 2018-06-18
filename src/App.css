@@ -1,28 +1,36 @@
-.App {
-  text-align: center;
+.nav-container {
+  padding: 10px 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.welcome-container {
+  padding: 50px 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.review-container {
+  overflow: hidden;
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.212);
 }
 
-.App-title {
-  font-size: 1.5em;
+.review {
+  animation: scroll-up;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
-.App-intro {
-  font-size: large;
+@keyframes scroll-up {
+  0% {transform: translateY(200%)}
+
+  6% {transform: translateY(-10%)}
+  8% {transform: translateY(2%)}
+
+  10%,90% {transform: translateY(0)}
+
+  96% {transform: translateY(10%)}
+  100% {transform: translateY(-200%)}
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.services-container {
+  padding: 50px 0;
 }

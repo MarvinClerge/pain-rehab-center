@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import './App.css'
 import Nav from './components/Nav'
 import Welcome from './components/Welcome'
 import Review from './components/Review'
