@@ -1,4 +1,5 @@
 import React from "react"
+import { Container, Divider, Button, Form, Input, TextArea } from 'semantic-ui-react'
 
 // rotating team , staff card,  rot loc container, loc card , message form
 
@@ -26,26 +27,21 @@ class MessageForm extends React.Component {
   }
 
   render = () => {
+    console.log(this.state.name)
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name:</label><br/>
-        <input type="text" onChange={this.handleChange} value={this.state.name} id="name" required="true"/>
-        <br/>
+      <Container className='message-container' textAlign='center'>
+        <Divider hidden />
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group widths='equal'>
+            <Form.Field onChange={this.handleChange} control={Input} label='Full Name' value={this.state.name } id="name" placeholder='Full Name' required="true"/>
+            <Form.Field onChange={this.handleChange} control={Input} label='Phone Number' value={this.state.phoneNumber } id="phoneNumber" placeholder='Phone Number' required="true" type="number"/>
+            <Form.Field onChange={this.handleChange} control={Input} label='Email' value={this.state.email } id="email" placeholder='Email' required="true" type="email"/>
+          </Form.Group>
 
-        <label htmlFor="phoneNumber">Phone Number:</label><br/>
-        <input type="number" onChange={this.handleChange} value={this.state.phoneNumber} id="phoneNumber" required="true"/>
-        <br/>
-
-        <label htmlFor="email">Email:</label><br/>
-        <input type="email" onChange={this.handleChange} value={this.state.email} id="email" required="true"/>
-        <br/>
-
-        <label htmlFor="message">Message:</label><br/>
-        <textarea type="text" onChange={this.handleChange} value={this.state.message} id="message" maxLength="300" required="true"/>
-        <br/>
-
-        <input type="submit" value="Submit"/>
-      </form>
+          <Form.Field onChange={this.handleChange} control={TextArea} label='Message' value={this.state.message } id="message" placeholder='How can we help?' required="true" maxLength="300"/>
+          <Form.Field control={Button}>Submit</Form.Field>
+        </Form>
+      </Container>
     )
   }
 

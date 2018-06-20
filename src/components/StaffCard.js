@@ -1,27 +1,33 @@
 import React from "react"
-import { Card, Image } from 'semantic-ui-react'
+import { Card, Image, Grid } from 'semantic-ui-react'
 
 
 const staffCard = (props) => {
+  // console.log(props)
+  if (props.staffData){
+    return (
+      <Grid.Column>
+        <Card onClick={handleClick}>
+          <Image src="https://images.gr-assets.com/authors/1494739839p8/14246142.jpg" />
+          <Card.Content>
 
-  return (
-    <Card>
-      <Image src='https://images.gr-assets.com/authors/1494739839p8/14246142.jpg' />
-      <Card.Content>
+            <Card.Header>
+              {props.staffData.name}
+            </Card.Header>
 
-        <Card.Header>
-          Dr. Nesly Clerge
-        </Card.Header>
+            <Card.Description>
+              {props.staffData.title} <br/>
+            </Card.Description>
 
-        <Card.Description>
-          Chiropractor <br/>
-          NRCME Examiner
-        </Card.Description>
+          </Card.Content>
+        </Card>
+      </Grid.Column >
+    )
+  }
+}
 
-      </Card.Content>
-    </Card>
-  )
-
+const handleClick = (e) => {
+  console.log("do something with me")
 }
 
 export default staffCard

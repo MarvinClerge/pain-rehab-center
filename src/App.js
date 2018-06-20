@@ -5,6 +5,8 @@ import Nav from './components/Nav'
 import Welcome from './components/Welcome'
 import Review from './components/Review'
 import Services from './components/ServicesContainer'
+import Team from './components/Team'
+import MessageForm from './components/MessageForm'
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
         <Welcome/>
         <Review/>
         <Services/>
+        <Team />
+        <MessageForm />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import React from "react"
 
 
 
-class RotatingLocationContainer extends React.Component {
+class LocationContainer extends React.Component {
   state = {
     name: "",
     phoneNumber: "",
