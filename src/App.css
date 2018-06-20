@@ -2,6 +2,27 @@
   padding: 10px 0;
 }
 
+.nav-link {
+  position: relative;
+}
+
+.nav-link div {
+  display: none;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px 10px;
+  width: 150px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(246, 246, 246);
+}
+
+.nav-link:hover div {
+  display: block;
+}
+
 .welcome-container {
   padding: 50px 0;
 }
